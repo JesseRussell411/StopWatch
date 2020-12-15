@@ -1,6 +1,6 @@
 #pragma once
 #include<chrono>
-
+// Stopwatch class similar to C#'s stopwatch all the way down to the namespace.
 namespace JesseRussell {
 	namespace Diagnostics {
 		class Stopwatch
