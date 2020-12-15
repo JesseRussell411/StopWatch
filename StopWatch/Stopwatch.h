@@ -39,6 +39,8 @@ namespace JesseRussell {
 				start();
 			}
 
+			bool isRunning() { return running; }
+
 			std::chrono::steady_clock::duration getElapsed() {
 				if (running)
 					return std::chrono::high_resolution_clock::now() - startTime;
