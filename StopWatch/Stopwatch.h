@@ -16,7 +16,7 @@ namespace JesseRussell {
 
 			void start() {
 				if (ready) {
-					startTime = std::chrono::high_resolution_clock::now();
+					startTime = std::chrono::steady_clock::now();
 					ready = false;
 				}
 				running = true;
@@ -24,7 +24,7 @@ namespace JesseRussell {
 
 			void stop() {
 				if (running) {
-					stopTime = std::chrono::high_resolution_clock::now();
+					stopTime = std::chrono::steady_clock::now();
 					running = false;
 				}
 			}
@@ -43,7 +43,7 @@ namespace JesseRussell {
 
 			std::chrono::steady_clock::duration getElapsed() {
 				if (running)
-					return std::chrono::high_resolution_clock::now() - startTime;
+					return std::chrono::steady_clock::now() - startTime;
 				else if (ready)
 					return std::chrono::steady_clock::duration::zero();
 				else

@@ -24,4 +24,5 @@ int main() {
 	cout << s.getElapsedMilliseconds() << endl;
 	this_thread::sleep_for(chrono::milliseconds(400));
 	cout << s.getElapsedMilliseconds() << endl;
+	cout << s.isRunning() << endl;
 }
